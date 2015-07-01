@@ -1,0 +1,21 @@
+c:\users\lads\documents\visual studio 2013\Projects\WpfControlLibrary1\WpfControlLibrary1\bin\Debug\WpfControlLibrary1.dll
+c:\users\lads\documents\visual studio 2013\Projects\WpfControlLibrary1\WpfControlLibrary1\bin\Debug\WpfControlLibrary1.pdb
+c:\users\lads\documents\visual studio 2013\Projects\WpfControlLibrary1\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.csprojResolveAssemblyReference.cache
+c:\users\lads\documents\visual studio 2013\Projects\WpfControlLibrary1\WpfControlLibrary1\obj\Debug\UserControl1.baml
+c:\users\lads\documents\visual studio 2013\Projects\WpfControlLibrary1\WpfControlLibrary1\obj\Debug\UserControl1.g.cs
+c:\users\lads\documents\visual studio 2013\Projects\WpfControlLibrary1\WpfControlLibrary1\obj\Debug\WpfControlLibrary1_MarkupCompile.cache
+c:\users\lads\documents\visual studio 2013\Projects\WpfControlLibrary1\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.g.resources
+c:\users\lads\documents\visual studio 2013\Projects\WpfControlLibrary1\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.Properties.Resources.resources
+c:\users\lads\documents\visual studio 2013\Projects\WpfControlLibrary1\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.csproj.GenerateResource.Cache
+c:\users\lads\documents\visual studio 2013\Projects\WpfControlLibrary1\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.dll
+c:\users\lads\documents\visual studio 2013\Projects\WpfControlLibrary1\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.pdb
+C:\Users\Adil Virani\Desktop\NuSys\WpfControlLibrary1\WpfControlLibrary1\obj\Debug\UserControl1.baml
+C:\Users\Adil Virani\Desktop\NuSys\WpfControlLibrary1\WpfControlLibrary1\obj\Debug\UserControl1.g.cs
+C:\Users\Adil Virani\Desktop\NuSys\WpfControlLibrary1\WpfControlLibrary1\obj\Debug\WpfControlLibrary1_MarkupCompile.cache
+C:\Users\Adil Virani\Desktop\NuSys\WpfControlLibrary1\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.g.resources
+C:\Users\Adil Virani\Desktop\NuSys\WpfControlLibrary1\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.Properties.Resources.resources
+C:\Users\Adil Virani\Desktop\NuSys\WpfControlLibrary1\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.csproj.GenerateResource.Cache
+C:\Users\Adil Virani\Desktop\NuSys\WpfControlLibrary1\WpfControlLibrary1\bin\Debug\WpfControlLibrary1.dll
+C:\Users\Adil Virani\Desktop\NuSys\WpfControlLibrary1\WpfControlLibrary1\bin\Debug\WpfControlLibrary1.pdb
+C:\Users\Adil Virani\Desktop\NuSys\WpfControlLibrary1\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.dll
+C:\Users\Adil Virani\Desktop\NuSys\WpfControlLibrary1\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.pdb

@@ -1,0 +1,32 @@
+﻿<UserControl Name="UserControlToolTip"
+             x:Class="CustomToolTip.UserControl1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" RenderTransformOrigin="0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
+
+             IsManipulationEnabled ="True"
+             d:DesignHeight="300" d:DesignWidth="300">
+
+    <Grid Height="150" Width="150">
+        <Rectangle Fill="AntiqueWhite"  HorizontalAlignment="Left" Height="200" MouseDown="box_MouseDown"  Stroke="Black" VerticalAlignment="Top" Width="200" Margin="1,-86,-51,0" />
+        <Image x:Name ="edit" MouseDown="edit_MouseDown" Source="edit.png" Margin="168,-80,-45,208" RenderTransformOrigin="-0.1,-9.382"/>
+        <Image x:Name="xbttn" IsManipulationEnabled="True" MouseDown="Image_MouseDown" Source="x-button.png" Height="22"  VerticalAlignment="Top"  HorizontalAlignment ="Right" Width="22" Margin="0,-80,118,0" RenderTransformOrigin="0.765,0.848"/>
+        <TextBox x:Name ="box" MouseDown="box_MouseDown" TextWrapping="Wrap" BorderThickness="0" Background="AntiqueWhite" Text="New Memo" Margin="10,-53,-24,55"/>
+        <Image Source="size.png" HorizontalAlignment="Left" Height="38" Margin="151,82,-50,0" VerticalAlignment="Top" Width="49" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.922"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+    </Grid>
+
+
+
+
+</UserControl>

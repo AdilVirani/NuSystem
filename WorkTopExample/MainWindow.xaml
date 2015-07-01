@@ -1,0 +1,153 @@
+﻿<Window x:Class="WorkTopExample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="clr-namespace:RadialMenu.Controls;assembly=RadialMenu" 
+        xmlns:Converters="clr-namespace:RadialMenuDemo.Utils"
+        xmlns:myToolTip="clr-namespace:CustomToolTip;assembly=WpfControlLibrary1"
+        xmlns:WpfControlLibrary2="clr-namespace:WpfControlLibrary2;assembly=WpfControlLibrary2"
+        MouseRightButtonDown="Window_MouseRightButtonDown"
+         ManipulationStarting="Window_ManipulationStarting"
+             ManipulationDelta="Window_ManipulationDelta"
+             ManipulationInertiaStarting="Window_InertiaStarting"
+             IsEnabled="True"
+             IsManipulationEnabled="True"
+            AllowDrop="True"
+
+        WindowState="Maximized"
+        Title="MainWindow">
+    <!-- What I'm doing here is adding a reference to the RadialMenu and setting MouseRightButtonDown so I can reference it in the C# code so whenever I right click, the RadialMenu appears -->
+        <Window.Resources>
+            <ResourceDictionary Source="Utils/Icons.xaml"/>
+            <!-- I added the source Icons.xaml to allow the RadialMenu to have icons as...I guess Eye Candy? haha -->
+        </Window.Resources>
+    
+        <StackPanel>
+        <Canvas x:Name="MyCanvas" Background="Gray" MouseMove="MyCanvas_MouseMove" MouseLeftButtonUp="MyCanvas_MouseLeftButtonUp" MouseWheel="Canvas_MouseWheel" Width="15000" Height="10000" >
+            <Canvas.Resources>
+                <!-- Think of '.Resources' as a CSS file, basically what it does is allow you to edit the elements basically adding make-up to them -->
+                <Style TargetType="{x:Type Controls:RadialMenuCentralItem}" BasedOn="{StaticResource {x:Type Controls:RadialMenuCentralItem}}">
+                    <!-- Height of the Circle == 65 pixels -->
+                    <!-- I set the TargetType to CentralItem because I will be making the 'x' button different than all the buttons -->
+                    <Setter Property="Background" Value="AliceBlue"/>
+                    <!---Background = AliceBlue -->
+                    <Setter Property="BorderBrush" Value="DarkBlue"/>
+                    <!-- Border = Dark Blue -->
+                    <Setter Property="BorderThickness" Value="4"/>
+                    <!-- Border Thickness = 4pixels -->
+                    <Setter Property="Width" Value="64"/>
+                    <!-- Width of the Circle == 64 pixels; it obviously changes proportions according to the size though -->
+                    <Setter Property="Height" Value="64"/>
+                </Style>
+                <Style TargetType="{x:Type Controls:RadialMenuItem}" BasedOn="{StaticResource {x:Type Controls:RadialMenuItem}}">
+                    <!-- The arrow Radius = 138px -->
+                    <!-- This is changing the style of all the RadialMenu Buttons -->
+                    <Setter Property="Background" Value="AliceBlue"/>
+                    <!-- Background = Alice Blue -->
+                    <Setter Property="Padding" Value="2"/>
+                    <!-- Padding = 2px -->
+                    <Setter Property="InnerRadius" Value="40"/>
+                    <!-- Inner Rad = 40px -->
+                    <Setter Property="OuterRadius" Value="150"/>
+                    <!-- Outer Rad = 150px -->
+                    <Setter Property="ContentRadius" Value="85"/>
+                    <!-- The Content which is the label and the picture radius = 85px -->
+                    <Setter Property="EdgeBackground" Value="DarkBlue"/>
+                    <!-- Edge Background = DarkBlue -->
+                    <Setter Property="EdgePadding" Value="7"/>
+                    <!-- Edge Padding = 7 px -->
+                    <Setter Property="EdgeInnerRadius" Value="130"/>
+                    <!-- Edge inner rad = 130px -->
+                    <Setter Property="EdgeOuterRadius" Value="145"/>
+                    <!-- Edge outer rad = 145px -->
+                    <Setter Property="ArrowBackground" Value="Cyan"/>
+                    <!-- The arrow Background = Cyan -->
+                    <Setter Property="ArrowRadius" Value="138"/>
+                </Style>
+            </Canvas.Resources>
+            <Canvas.RenderTransform>
+                <ScaleTransform x:Name="st"/>
+            </Canvas.RenderTransform>
+           
+            <Controls:RadialMenu x:Name="MyRadialMenu" IsOpen="{Binding IsOpen}">
+                <!-- Last one will allow you to upload your dashboard to HTML -->
+                <!-- I name the RadialMenu 'MyRadialMenu just incase I want to edit it in the C# code. I make the Binding IsOpen to show because the following code is for when the Radial Menu IsOpen -->
+                <Controls:RadialMenu.CentralItem>
+                    <Controls:RadialMenuCentralItem Command="{Binding CloseRadialMenu}">
+                        <Rectangle Width="25" Height="25">
+                            <Rectangle.Fill>
+                                <VisualBrush Visual="{StaticResource appbar_close}"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                    </Controls:RadialMenuCentralItem>
+                </Controls:RadialMenu.CentralItem>
+                <!-- The code above is for the center button. This button is set to close the menu when clicked on in the C# code. Thats why the command is 'CloseRadialMenu'. The way I get the image is by the app_close static resource from Icons.xaml-->
+                <Controls:RadialMenuItem Command="{Binding Test1}">
+                    <WrapPanel Orientation="Vertical">
+                        <Rectangle Width="25" Height="25">
+                            <Rectangle.Fill>
+                                <VisualBrush Visual="{StaticResource appbar_add}"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                        <TextBlock FontSize="14" TextAlignment="Center"><Run Text="Add Text"/></TextBlock>
+                    </WrapPanel>
+                </Controls:RadialMenuItem>
+                <!-- I continue to add the buttons the same way each button has a different function, for the following functions I add a textblock to display what each function does. Not sure what this one will do -->
+                <Controls:RadialMenuItem Command="{Binding Test2}">
+                    <WrapPanel Orientation="Vertical">
+                        <Rectangle Width="25" Height="25">
+                            <Rectangle.Fill>
+                                <VisualBrush Visual="{StaticResource appbar_edit}"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                        <TextBlock FontSize="14" TextAlignment="Center"><Run Text="Add Writing"/></TextBlock>
+                    </WrapPanel>
+                </Controls:RadialMenuItem>
+                <!-- This one will make you edit the 'nodes' on the dashboard. By edit I mean be able to type or draw on the nodes -->
+                <Controls:RadialMenuItem Command="{Binding Test3}">
+                    <WrapPanel Orientation="Vertical">
+                        <Rectangle Width="23" Height="25">
+                            <Rectangle.Fill>
+                                <VisualBrush Visual="{StaticResource appbar_calculator}"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                        <TextBlock FontSize="14" TextAlignment="Center"><Run Text="Calculator"/></TextBlock>
+                    </WrapPanel>
+                </Controls:RadialMenuItem>
+                <!-- IDK What this one should do? -->
+                <Controls:RadialMenuItem Command="{Binding Test4}">
+                    <WrapPanel Orientation="Vertical">
+                        <Rectangle Width="20" Height="25">
+                            <Rectangle.Fill>
+                                <VisualBrush Visual="{StaticResource appbar_delete}"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                        <TextBlock FontSize="14" TextAlignment="Center"><Run Text="Delete"/></TextBlock>
+                    </WrapPanel>
+                </Controls:RadialMenuItem>
+                <!-- This will allow you to delete a 'node' -->
+                <Controls:RadialMenuItem Command="{Binding Test5}">
+                    <WrapPanel Orientation="Vertical">
+                        <Rectangle Width="20" Height="25">
+                            <Rectangle.Fill>
+                                <VisualBrush Visual="{StaticResource appbar_page}"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                        <TextBlock FontSize="14" TextAlignment="Center"><Run Text="New Page"/></TextBlock>
+                    </WrapPanel>
+                </Controls:RadialMenuItem>
+                <!-- This will not only allow you to make a new 'node' but it will give an option of which type of node you want to create. The options will be a note, drawing note, or image -->
+                <Controls:RadialMenuItem Command="{Binding Test6}" Click="AddButtonClick">
+                    <WrapPanel Orientation="Vertical">
+                        <Rectangle Width="19" Height="26">
+                            <Rectangle.Fill>
+                                <VisualBrush Visual="{StaticResource appbar_upload}"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                        <TextBlock FontSize="14" TextAlignment="Center"><Run Text="Upload Image"/></TextBlock>
+                    </WrapPanel>
+                </Controls:RadialMenuItem>
+            </Controls:RadialMenu>
+
+        </Canvas>
+    </StackPanel>
+</Window>

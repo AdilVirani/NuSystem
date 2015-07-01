@@ -1,0 +1,10 @@
+C:\Users\Adil Virani\Desktop\NuSys\WpfControlLibrary2\WpfControlLibrary2\bin\Debug\WpfControlLibrary2.dll
+C:\Users\Adil Virani\Desktop\NuSys\WpfControlLibrary2\WpfControlLibrary2\bin\Debug\WpfControlLibrary2.pdb
+C:\Users\Adil Virani\Desktop\NuSys\WpfControlLibrary2\WpfControlLibrary2\obj\Debug\UserControl2.baml
+C:\Users\Adil Virani\Desktop\NuSys\WpfControlLibrary2\WpfControlLibrary2\obj\Debug\UserControl2.g.cs
+C:\Users\Adil Virani\Desktop\NuSys\WpfControlLibrary2\WpfControlLibrary2\obj\Debug\WpfControlLibrary2_MarkupCompile.cache
+C:\Users\Adil Virani\Desktop\NuSys\WpfControlLibrary2\WpfControlLibrary2\obj\Debug\WpfControlLibrary2.g.resources
+C:\Users\Adil Virani\Desktop\NuSys\WpfControlLibrary2\WpfControlLibrary2\obj\Debug\WpfControlLibrary2.Properties.Resources.resources
+C:\Users\Adil Virani\Desktop\NuSys\WpfControlLibrary2\WpfControlLibrary2\obj\Debug\WpfControlLibrary2.csproj.GenerateResource.Cache
+C:\Users\Adil Virani\Desktop\NuSys\WpfControlLibrary2\WpfControlLibrary2\obj\Debug\WpfControlLibrary2.dll
+C:\Users\Adil Virani\Desktop\NuSys\WpfControlLibrary2\WpfControlLibrary2\obj\Debug\WpfControlLibrary2.pdb
